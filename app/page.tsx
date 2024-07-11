@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Header from "./components/header";
 import styles from "./page.module.css";
-import plusIcon from "@/public/plus.png";
-import clipboardIcon from "@/public/clipboard.png";
+import plusIcon from "@/public/plus.svg";
+import clipboardIcon from "@/public/clipboard.svg";
 
 export default function Home() {
   console.log(plusIcon)
