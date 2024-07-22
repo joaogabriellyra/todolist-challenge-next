@@ -1,0 +1,88 @@
+.main {
+  max-width: 736px;
+  margin: 0 auto;
+}
+
+.divTaskInputAndButton {
+  margin-top: calc(0px - 27px);
+  display: grid;
+  grid-template-columns: 638px 90px;
+  gap: 8px;
+  margin-bottom: 64px;
+}
+
+.typeTaskInput {
+  height: 52px;
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+}
+
+.typeTaskInput::placeholder {
+  color: var(--gray-300);
+}
+
+.createTaskButton {
+  border: none;
+  height: 52px;
+  border-radius: 8px;
+  padding: 16px;
+  color: var(--gray-100);
+  background: var(--blue-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.createTaskButton:hover {
+  background: var(--blue);
+}
+
+.createTaskButton span {
+  font-size: var(--font-normal);
+}
+
+.boxWithInfoAboutTasks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* .boxWithInfoAboutTasksCreated {
+} */
+
+.boxWithInfoAboutTasksCreated > span:first-of-type {
+  margin-right: 8px;
+  font-size: var(--font-normal);
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.boxWithInfoAboutTasksCreated > span:last-child, .boxWithInfoAboutTasksDone > span:last-child {
+  padding: 2px 8px;
+  color: var(--gray-200);
+  border-radius: 10px;
+  background-color: var(--gray-400);
+}
+
+
+/* .boxWithInfoAboutTasksDone {
+} */
+
+.boxWithInfoAboutTasksDone > span:first-child {
+  margin-right: 8px;
+  font-size: var(--font-normal);
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.boxWithoutTasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-top: 1px solid #333333; */
+}

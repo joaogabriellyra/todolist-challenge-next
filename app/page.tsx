@@ -2,21 +2,22 @@ import Image from "next/image";
 import Header from "./components/header";
 import styles from "./page.module.css";
 import plusIcon from "@/public/plus.svg";
-import clipboardIcon from "@/public/clipboard.svg";
+import WithoutTasks from "./components/withoutTasks";
+import Task from "./components/task";
 
 export default function Home() {
-  console.log(plusIcon)
   return (
     <>
     <Header />
     <main className={styles.main}>
-      <div>
+      <div className={styles.divTaskInputAndButton}>
         <input 
           type="text"
           placeholder="Adicione uma nova tarefa"
+          className={styles.typeTaskInput}
         />
-        <button>
-          Criar
+        <button className={styles.createTaskButton}>
+          <span>Criar</span>
           <Image 
             src={plusIcon}
             alt="plus icon"
@@ -25,23 +26,22 @@ export default function Home() {
           />
         </button>
       </div>
-      <div>
-        <div>
+      <div className={styles.boxWithInfoAboutTasks}>
+        <div className={styles.boxWithInfoAboutTasksCreated}>
           <span>Tarefas criadas</span>
-          <span></span>
+          <span>0</span>
         </div>
-        <div>
+        <div className={styles.boxWithInfoAboutTasksDone}>
           <span>Concluídas</span>
-          <span></span>
+          <span>0</span>
         </div>
       </div>
-      <div>
-        <Image
-          src={clipboardIcon}
-          alt="clipboard"
-        />
-        <p>Você ainda não tem tarefas cadastradas</p>
-        <p>Crie tarefas e organize seus itens a fazer</p>
+      <div className={styles.boxWithoutTasks}>
+        <Task/>
+        <Task/>
+        <Task/>
+        <Task/>
+        <Task/>
       </div>
     </main>
     </>
