@@ -1,14 +1,21 @@
 .task {
   display: flex;
-  flex: 1;
-  gap: 12px;
-  padding: 16px;
-  background-color: var(--gray-500);
+  justify-content: space-between;
+
+  padding: 1rem;
   border-radius: 8px;
+  
+  background-color: var(--gray-500);
 }
 
 .task + .task {
-  margin-top: 12px;
+  margin-top: 0.75rem;
+}
+
+.textAndCheckbox {
+  display: flex;
+  flex: 1;
+  gap: 0.75rem;
 }
 
 .check {
@@ -39,7 +46,15 @@
 
 .task p {
   line-height: var(--font-lineheight);
-  color: var(--gray-100);
+  
+  max-width: 39.5rem;
+
+  word-wrap: break-word;
+}
+
+.finishedParagraph {
+  text-decoration: line-through;
+  color: var(--gray-300);
 }
 
 .textChecked {
@@ -47,10 +62,10 @@
   color: var(--gray-300);
 }
 
-.task button {
+.trashButton {
   height: 1.5rem;
   width: 1.5rem;
-  padding: 4px 0;
+  padding: 0.25rem 0;
 
   border: none;
   cursor: pointer;
@@ -59,7 +74,7 @@
   background-color: var(--gray-500);
 }
 
-.task button:hover {
+.trashButton:hover {
   background-color: var(--gray-400);
   color: var(--danger);
 }

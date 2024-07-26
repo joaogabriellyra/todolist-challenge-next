@@ -13,9 +13,10 @@
 
 .typeTaskInput {
   height: 52px;
+  padding: 16px;
   border: 1px solid var(--gray-700);
   border-radius: 8px;
-  padding: 16px;
+
   background-color: var(--gray-500);
   color: var(--gray-100);
 }
@@ -24,16 +25,23 @@
   color: var(--gray-300);
 }
 
+.typeTaskInputError {
+  border: 1px solid var(--danger);
+}
+
 .createTaskButton {
-  border: none;
-  height: 52px;
-  border-radius: 8px;
-  padding: 16px;
-  color: var(--gray-100);
-  background: var(--blue-dark);
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  height: 52px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+
+  color: var(--gray-100);
+  background: var(--blue-dark);
+  
   cursor: pointer;
   transition: 0.25s;
 }
@@ -56,33 +64,45 @@
 } */
 
 .boxWithInfoAboutTasksCreated > span:first-of-type {
-  margin-right: 8px;
   font-size: var(--font-normal);
   font-weight: bold;
   color: var(--blue);
+
+  margin-right: 8px;
 }
 
 .boxWithInfoAboutTasksCreated > span:last-child, .boxWithInfoAboutTasksDone > span:last-child {
   padding: 2px 8px;
+  border-radius: 10px;
+
   color: var(--gray-200);
+  background-color: var(--gray-400);
+}
+
+.boxWithInfoAboutTasksDone > span:first-child {
+  margin-right: 0.5rem;
+  padding: 0.35rem;
+
+  font-size: var(--font-normal);
+  font-weight: bold;
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.boxWithInfoAboutTasksDone > span:first-of-type:hover {
   border-radius: 10px;
   background-color: var(--gray-400);
 }
 
-
-/* .boxWithInfoAboutTasksDone {
-} */
-
-.boxWithInfoAboutTasksDone > span:first-child {
-  margin-right: 8px;
-  font-size: var(--font-normal);
-  font-weight: bold;
-  color: var(--purple);
+.finishedTasksRendered {
+  background-color: var(--gray-400);
+  border-radius: 10px;
 }
 
 .boxWithoutTasks {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border-top: 1px solid #333333; */
+  
+  border-top: 1px solid #333333;
 }
