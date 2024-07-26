@@ -103,7 +103,7 @@ export default function Home() {
         <div className={styles.boxWithInfoAboutTasksDone}>
           <span 
             onClick={handleFinishedTasks}
-            className={clsx(finishedTasksRendered && styles.finishedTasksRendered)}
+            className={clsx(finishedTasksRendered && finishedTasks.length && styles.finishedTasksRendered)}
           >
             Concluídas
           </span>
