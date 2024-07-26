@@ -45,7 +45,8 @@ export default function Home() {
       return task
     });
     const taskWhoChangedTheFinishedStatus = tasks.find(task => task.id === id);
-    taskWhoChangedTheFinishedStatus?.finished ? setCounterOfFinishedTasks(counterOfFinishedTasks - 1) : setCounterOfFinishedTasks(counterOfFinishedTasks + 1)
+    taskWhoChangedTheFinishedStatus?.finished ? 
+    setCounterOfFinishedTasks((state) => state - 1) : setCounterOfFinishedTasks((state) => state + 1)
     setTasks(someTaskHasChangedTheFinishedState);
   }
 
@@ -54,7 +55,7 @@ export default function Home() {
     const tasksWithoutDeletedOne = tasks.filter((task) => task.id !== id);
     setTasks(tasksWithoutDeletedOne);
     if (theDeletedOne?.finished) {
-      setCounterOfFinishedTasks(counterOfFinishedTasks - 1);
+      setCounterOfFinishedTasks(((state) => state - 1));
     if (finishedTasksRendered) {
       const finishedTasksToRender = tasksWithoutDeletedOne.filter((task) => task.finished);
       setFinishedTasks(finishedTasksToRender);
